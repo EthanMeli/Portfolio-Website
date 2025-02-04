@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .content {
+            flex: 1;
+        }
+        .carousel-item img {
+            border: 5px solid black;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">EM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hobbies.html">Hobbies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                </ul>
+                <img src="../resources/img/icon.png" alt="Icon" class="img-fluid" style="height: 30px;">
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 content">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <img src="../resources/img/self.JPG" alt="My Picture" class="img-fluid rounded">
+            </div>
+            <div class="col-md-8">
+                <p class="lead">Hello! My name is Ethan Meli. Welcome to my personal website where I share my projects, hobbies, and resume. I am currently a Junior
+                  studying Computer Science, Business, and French at the University of Colorado Boulder. My expected graduation date is May 2026.
+                </p>
+                <a href="resume.html" class="btn btn-primary">View My Resume</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/ethan-meli-b14861256/" target="_blank" class="text-white">LinkedIn</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

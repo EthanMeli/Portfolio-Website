@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .content {
+            flex: 1;
+        }
+        .carousel-item img {
+            border: 5px solid black;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">EM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="hobbies.html">Hobbies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                </ul>
+                <img src="../resources/img/icon.png" alt="Icon" class="img-fluid" style="height: 30px;">
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 content">
+        <h2 class="text-center">My Hobbies</h2>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="../resources/img/guitar.png" class="card-img-top" alt="Hobby 1" height="400px">
+                    <div class="card-body">
+                        <h5 class="card-title">Guitar</h5>
+                        <p class="card-text">I enjoy playing the guitar, especially my Epiphone Les Paul.
+                          I primarily play Indie Rock, and 80s music.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="../resources/img/travel.JPG" class="card-img-top" alt="Hobby 2" height="400px">
+                    <div class="card-body">
+                        <h5 class="card-title">Traveling</h5>
+                        <p class="card-text">Exploring new cultures and landscapes is a passion of mine.
+                          I recently took a trip to Japan (Documented above).
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="../resources/img/computer.png" class="card-img-top" alt="Hobby 3" height="400px">
+                    <div class="card-body">
+                        <h5 class="card-title">Computers</h5>
+                        <p class="card-text">I love everything computer related, especially PC gaming and coding.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/ethan-meli-b14861256/" target="_blank" class="text-white">LinkedIn</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
