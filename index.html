@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethan Meli - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        /* Align project buttons consistently at the bottom of each card */
+        .projects-grid { align-items: stretch; }
+        .project-card { display: flex; flex-direction: column; }
+        .project-card .quest-btn { margin-top: auto; }
+
+        /* Center project pages */
+        .project-page { padding-top: 24px; }
+        .project-page .project-header,
+        .project-page .project-content {
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Center project titles while keeping the back button on the left */
+        .project-page .project-header {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+        }
+        .project-page .project-header .back-btn {
+            grid-column: 1;
+            justify-self: start;
+        }
+        .project-page .project-header h1 {
+            grid-column: 2;
+            justify-self: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="pixel-wall">
+        <!-- Animated torches (moved to edges to avoid overlap with content) -->
+        <div class="torch" style="left: 8%">
+            <div class="handle"></div>
+            <div class="bracket"></div>
+            <div class="coal"></div>
+            <div class="flame"></div>
+        </div>
+
+        <div class="torch" style="left: 92%">
+            <div class="handle"></div>
+            <div class="bracket"></div>
+            <div class="coal"></div>
+            <div class="flame"></div>
+        </div>
+
+        <!-- Additional torches positioned lower at edges -->
+        <div class="torch" style="left: 8%; top: 115vh;">
+            <div class="handle"></div>
+            <div class="bracket"></div>
+            <div class="coal"></div>
+            <div class="flame"></div>
+        </div>
+
+        <div class="torch" style="left: 92%; top: 115vh;">
+            <div class="handle"></div>
+            <div class="bracket"></div>
+            <div class="coal"></div>
+            <div class="flame"></div>
+        </div>
+
+        <div class="container">
+            <!-- Home Page -->
+            <section id="home" class="page active">
+                <header class="hero">
+                    <h1 class="glitch" data-text="Ethan Meli">Ethan Meli</h1>
+                    <p class="subtitle">Computer Scientist</p>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/EthanMeli" target="_blank" class="btn btn-secondary">
+                            <span class="icon"><img src="/assets/imgs/github.png" alt="GitHub" width="16" height="16"></span> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/ethanmeli/" target="_blank" class="btn btn-secondary">
+                            <span class="icon"><img src="/assets/imgs/linkedin.png" alt="LinkedIn" width="16" height="16"></span> LinkedIn
+                        </a>
+                    </div>
+                </header>
+
+                <div class="about-section">
+                    <div class="about-card">
+                        <div class="about-content">
+                            <div class="headshot-container">
+                                <div class="pixelated-frame">
+                                    <img src="/assets/imgs/headshot.jpg" alt="Ethan Meli" class="headshot">
+                                </div>
+                            </div>
+                            <div class="about-text">
+                                <h2>About Me</h2>
+                                <p style="text-align: justify">I’m a builder and problem solver who loves bringing ideas to life through code. I’m passionate about creating things that are actually usable and make a real impact, whether that’s an AI project, a game, or a tool that helps people in their everyday lives. My background in computer science and business drives me to think not just about how something works, but why it matters and who it helps. I’m always experimenting, learning, and trying to turn creativity into something tangible that people can enjoy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-section">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="projects-grid">
+                        <div class="project-card" data-project="project1">
+                            <div class="card-header">
+                                <h3>HelloWorld</h3>
+                            </div>
+                            <p class="card-description">A retro-style language learning mobile application</p>
+                            <button class="btn btn-primary quest-btn" onclick="showProject('project1')">
+                                View Project →
+                            </button>
+                        </div>
+
+                        <div class="project-card" data-project="project2">
+                            <div class="card-header">
+                                <h3>WeBots Grocery Shopper</h3>
+                            </div>
+                            <p class="card-description">Robotics project focused on navigating and interacting with a grocery shopping environment</p>
+                            <button class="btn btn-primary quest-btn" onclick="showProject('project2')">
+                                View Project →
+                            </button>
+                        </div>
+
+                        <div class="project-card" data-project="project3">
+                            <div class="card-header">
+                                <h3>CompSciLife</h3>
+                            </div>
+                            <p class="card-description">Virtual board game designed to mimic 'The Game of Life' with a Computer Science spin</p>
+                            <button class="btn btn-primary quest-btn" onclick="showProject('project3')">
+                                View Project →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project Pages -->
+            <section id="project1" class="page project-page">
+                <div class="project-header">
+                    <button class="btn btn-secondary back-btn" onclick="showHome()">← Return to Home</button>
+                    <h1>HelloWorld</h1>
+                </div>
+                <div class="project-content">
+                    <div class="project-details">
+                        <h2>Project Details</h2>
+                        <p><strong>Technologies:</strong> React Native, Node.js, Express.js, MongoDB</p>
+                        <p><strong>Duration:</strong> In Progress</p>
+                        
+                        <h3>The Story</h3>
+                        <p style="text-align: justify;">This project was inspired by my method of learning languages. While I want this application to be as effective as possible, I also want to make it as enjoyable and as fun as I can. This project utilizes React Native for the front end, with a Node.js and Express.js backend. It features user authentication, language lesson plans, and many other features to enhance the language learning experience.</p>
+                        
+                        <h3>Challenges Conquered</h3>
+                        <ul>
+                            <li>Implemented custom lesson plans</li>
+                            <li>Created a custom authentication system</li>
+                        </ul>
+
+                        <h3>Future Enhancements</h3>
+                        <ul>
+                            <li>Integrate speech recognition for language practice</li>
+                            <li>Add gamification elements to lessons</li>
+                            <li>Implement progress tracking</li>
+                            <li>Implement spaced repetition flashcards for vocabulary retention</li>
+                        </ul>
+
+                        <div class="project-links">
+                            <a target="_blank" href="https://github.com/EthanMeli/HelloWorld/tree/main" class="btn btn-secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="project2" class="page project-page">
+                <div class="project-header">
+                    <button class="btn btn-secondary back-btn" onclick="showHome()">← Return to Home</button>
+                    <h1>WeBots Grocery Shopper</h1>
+                </div>
+                <div class="project-content">
+                    <div class="project-details">
+                        <h2>Project Details</h2>
+                        <p><strong>Technologies:</strong> WeBots, Python</p>
+                        <p><strong>Duration:</strong> 2 months</p>
+                        
+                        <h3>The Story</h3>
+                        <p style="text-align: justify;">This project implements a robotic system in Webots capable of mapping, localization, computer vision, navigation, and manipulation to autonomously find and pick up colored cubes in a simulated grocery environment.</p>
+                        
+                        <h3>Challenges Conquered</h3>
+                        <ul>
+                            <li>Mapping & Localization: Using LiDAR, GPS, and odometry with transformation matrices.</li>
+                            <li>Computer Vision: Blob detection with OpenCV to identify colored blocks.</li>
+                            <li>Navigation: RRT-based planning for navigating between cube pickup points.</li>
+                            <li>Manipulation: Inverse kinematics for arm control to pick up and place objects.</li>
+                        </ul>
+                        
+                        <div class="project-links">
+                            <a target="_blank" href="https://drive.google.com/file/d/1E_hY_XuV3zQ2FOlk6AAgOr4-ZdHATPYO/view?pli=1" class="btn btn-primary">View Live Demo</a>
+                            <a target="_blank" href="https://github.com/EthanMeli/RoboticsFinalProject?tab=readme-ov-file" class="btn btn-secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="project3" class="page project-page">
+                <div class="project-header">
+                    <button class="btn btn-secondary back-btn" onclick="showHome()">← Return to Home</button>
+                    <h1>CompSciLife</h1>
+                </div>
+                <div class="project-content">
+                    <div class="project-details">
+                        <h2>Project Details</h2>
+                        <p><strong>Technologies:</strong> QT Creator, C++</p>
+                        <p><strong>Duration:</strong> 2 months</p>
+                        
+                        <h3>The Story</h3>
+                        <p style="text-align: justify;">This game was designed to mimic the classic board game "Life", incorporating elements of chance and strategy as players navigate through various life events. Working alongside my partner in this project, we decided to give this game a Computer Science spin, making light of a student's life through university.</p>
+                        
+                        <h3>Challenges Conquered</h3>
+                        <ul>
+                            <li>Creating visual board representation</li>
+                            <li>Implementing game logic and rules</li>
+                            <li>Designing user interface for player interactions</li>
+                            <li>Simulating computer player games for testing</li>
+                        </ul>
+                        
+                        <div class="project-links">
+                            <a target="_blank" href="https://github.com/EthanMeli/CompSciLife" class="btn btn-secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Ensure top-of-page and page switch on project navigation (robust across browsers)
+        (function () {
+            function showPage(id) {
+                document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+                const el = document.getElementById(id);
+                if (el) el.classList.add('active');
+            }
+
+            function scrollTopNow() {
+                // Force to top using multiple methods for cross-browser reliability
+                window.scrollTo(0, 0);
+                document.documentElement.scrollTop = 0;
+                document.body.scrollTop = 0;
+            }
+
+            window.showProject = function (projectId) {
+                showPage(projectId);
+                scrollTopNow();
+                requestAnimationFrame(scrollTopNow); // after layout
+            };
+
+            window.showHome = function () {
+                showPage('home');
+                scrollTopNow();
+                requestAnimationFrame(scrollTopNow);
+            };
+        })();
+    </script>
+</body>
+</html>
